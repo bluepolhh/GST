@@ -14,12 +14,13 @@
   <style>
     .btn{min-height:42px;padding:9px 10px;font-size:.92rem;line-height:1.15}
     .actions .btn{white-space:normal}
+    .app-version{margin:10px 0 0;text-align:center;color:#7b8aa3;font-size:.72rem;line-height:1.2}
     @media (max-width:430px){.btn{min-height:40px;padding:8px 7px;font-size:.82rem}}
   </style>
 </head>
 <body>
   <div class="app" data-owner="Dangschat, PP018217" data-maintainer="Dangschat, PP018217">
-    <header><div class="topline"><div class="brand"><div class="mark" aria-hidden="true">dK</div><div><h1>digitaler Kontrollassistent</h1><p class="subtitle">f&uuml;r Gro&szlig;raum- und Schwerlasttransporte</p></div></div><div class="header-right"><div class="support-note">bereitgestellt durch: Dangschat, PP018217<br>Bei Fragen, melden</div><div class="progress-text" id="progressText">1 / 15</div></div></div><div class="progress" aria-hidden="true"><span id="progressBar"></span></div></header>
+    <header><div class="topline"><div class="brand"><div class="mark" aria-hidden="true">dK</div><div><h1>digitaler Kontrollassistent</h1><p class="subtitle">f&uuml;r Gro&szlig;raum- und Schwerlasttransporte</p><p class="subtitle" style="font-size:.74rem;margin-top:2px">Polizei Hamburg</p></div></div><div class="header-right"><div class="support-note">bereitgestellt durch: Dangschat, PP018217<br>Bei Fragen, melden</div><div class="progress-text" id="progressText">1 / 16</div></div></div><div class="progress" aria-hidden="true"><span id="progressBar"></span></div></header>
     <main>
       <section class="step active" data-title="Startseite"><div class="hero"><h2>GST/SLT-Hilfe</h2><p class="lead">Diese Anwendung dient ausschließlich der Hilfestellung und Unterstützung bei dienstlichen Aufgaben. Die bereitgestellten Informationen und Vorschläge erheben keinen Anspruch auf Vollständigkeit oder Fehlerfreiheit. Die Hinweise ersetzen nicht die sorgfältige Prüfung und eigenverantwortliche Entscheidung durch die Nutzenden.</p><details class="privacy-note"><summary>Datenschutzhinweis anzeigen</summary><p>Die Anwendung darf ausschließlich im Einklang mit den geltenden Datenschutzvorschriften, insbesondere DSGVO und HmbDSG, genutzt werden. Es liegt in der Verantwortung der nutzenden Personen, sicherzustellen, dass keine unzulässigen oder personenbezogenen Daten verarbeitet werden.</p></details><div class="hero-actions"><button class="btn primary" type="button" data-next>Kontrolle starten</button><button class="btn secondary" type="button" id="resetBtn">Neue leere Kontrolle</button></div><div class="notice"><strong>Wichtige Info:</strong> Bei Unklarheiten bitte Rücksprache mit der absendenden Dienststelle halten, insbesondere wenn der Transport für eine andere Dienststelle begleitet wird. Zusätzlich steht auf jeder Wache und in jeder Schicht ein SLT-Multiplikator als Ansprechpartner zur Verfügung.</div></div></section>
       <section class="step" data-title="Kompetenzniveau"><h2>Kompetenzniveau auswählen</h2><p class="lead">PK44, PK 46, PK 42, WSPK 1 und 2 sind Schwerpunkt-PKs</p><div class="choices"><label class="choice"><input type="radio" name="competence" value="Kontrollkräfte PK -Mindestkompetenz"><span>Kontrollkräfte PK -Mindestkompetenz</span></label><label class="choice"><input type="radio" name="competence" value="Kontrollkräfte Schwerpunkt PK - ausreichende Kompetenz"><span>Kontrollkräfte Schwerpunkt PK - ausreichende Kompetenz</span></label><label class="choice is-disabled"><input type="radio" name="competence" value="Kontrollkräfte VD - übrige" disabled><span>Kontrollkräfte VD - übrige <small>noch in Bearbeitung</small></span></label><label class="choice is-disabled"><input type="radio" name="competence" value="Kontrollkräfte VD - Schwerlastgruppe" disabled><span>Kontrollkräfte VD - Schwerlastgruppe <small>noch in Bearbeitung</small></span></label></div><div class="error" id="competenceError">Bitte ein Kompetenzniveau auswählen.</div></section>
@@ -38,6 +39,7 @@
       <section class="step" data-title="Zusammenfassung"><h2>Zusammenfassung</h2><p class="lead">Prüfe die Angaben der Kontrolle.</p><div class="summary" id="summary"></div><div class="small-actions summary-actions"><button class="btn primary" type="button" id="downloadShortSummaryBtn">Daten für Gebührenbericht</button><button class="btn secondary" type="button" id="downloadSummaryBtn">Gesamtzusammenfassung speichern</button></div></section>
       <div class="actions" id="navActions" hidden><button class="btn secondary" type="button" id="backBtn">Zurück</button><button class="btn primary" type="button" id="nextBtn">Weiter</button><button class="btn danger" type="button" id="abortBtn">Abbruch</button></div>
     </main>
+    <div class="app-version">v.1.0 (Stand 13.07.2026)</div>
   </div>
   <script>
     const steps=Array.from(document.querySelectorAll('.step')),progressText=document.getElementById('progressText'),progressBar=document.getElementById('progressBar'),backBtn=document.getElementById('backBtn'),abortBtn=document.getElementById('abortBtn'),nextBtn=document.getElementById('nextBtn'),navActions=document.getElementById('navActions'),scopeListEl=document.getElementById('scopeList'),documentsListEl=document.getElementById('documentsList'),techListEl=document.getElementById('techList'),cargoSecuringEl=document.getElementById('cargoSecuring'),defectsEl=document.getElementById('defects'),summaryEl=document.getElementById('summary'),storageKey='transportkontrolle-app-v4';
@@ -107,6 +109,7 @@
   <!-- maintainer-watermark: Dangschat, PP018217 -->
 </body>
 </html>
+
 
 
 
