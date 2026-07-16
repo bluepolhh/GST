@@ -39,7 +39,7 @@
       <section class="step" data-title="Zusammenfassung"><h2>Zusammenfassung</h2><p class="lead">Prüfe die Angaben der Kontrolle.</p><div class="summary" id="summary"></div><div class="small-actions summary-actions"><button class="btn primary" type="button" id="downloadShortSummaryBtn">Daten für Gebührenbericht</button><button class="btn secondary" type="button" id="downloadSummaryBtn">Gesamtzusammenfassung speichern</button></div></section>
       <div class="actions" id="navActions" hidden><button class="btn secondary" type="button" id="backBtn">Zurück</button><button class="btn primary" type="button" id="nextBtn">Weiter</button><p class="danger-text" id="vdScopeNotice" hidden>noch in Bearbeitung</p><button class="btn danger" type="button" id="abortBtn">Abbruch</button></div>
     </main>
-    <div class="app-version">v.1.1 (Stand 16.07.2026)</div><details class="patch-notes"><summary>Patchnotes anzeigen</summary><ul><li><strong>13.07.2026:</strong> Grundstruktur, Kompetenzniveau, Transportdaten, Plausibilität und Zusammenfassung aufgebaut.</li><li><strong>14.07.2026:</strong> Mindestkompetenz verschlankt, Dokumente/Technik/Ladungssicherung erweitert und Exportfunktionen ergänzt.</li><li><strong>16.07.2026:</strong> Differenzierte Plausibilitätsprüfung mit optionalen Ladungsmaßen, 29er/70er-Kopplung, dynamische Warnung bei fehlenden Genehmigungen, VEMAGS-Bildlinks, 100t-Hinweis, VD-Prüfumfang, Technik-/Reifenlinks, Spanngurt-Hinweise und überarbeitete Zusammenfassung ergänzt.</li></ul></details>
+    <div class="app-version">v.1.1 (Stand 16.07.2026)</div><details class="patch-notes"><summary>Patchnotes anzeigen</summary><ul><li><strong>13.07.2026:</strong> Grundstruktur, Kompetenzniveau, Transportdaten, Plausibilität und Zusammenfassung aufgebaut.</li><li><strong>14.07.2026:</strong> Mindestkompetenz verschlankt, Dokumente/Technik/Ladungssicherung erweitert und Exportfunktionen ergänzt.</li><li><strong>16.07.2026:</strong> Differenzierte Plausibilitätsprüfung mit optionalen Ladungsmaßen, 29er/70er-Kopplung, dynamische Warnung bei fehlenden Genehmigungen, VEMAGS-Bildlinks, 100t-Hinweis, VD-Prüfumfang, Technik-/Reifenlinks, Spanngurt-Hinweise, Transportbeginn mit Strecke/Zeit/Auflagen/Funkkontakt und überarbeitete Zusammenfassung ergänzt.</li></ul></details>
   </div>
   <script>
     const steps=Array.from(document.querySelectorAll('.step')),progressText=document.getElementById('progressText'),progressBar=document.getElementById('progressBar'),backBtn=document.getElementById('backBtn'),abortBtn=document.getElementById('abortBtn'),nextBtn=document.getElementById('nextBtn'),navActions=document.getElementById('navActions'),scopeListEl=document.getElementById('scopeList'),documentsListEl=document.getElementById('documentsList'),techListEl=document.getElementById('techList'),cargoSecuringEl=document.getElementById('cargoSecuring'),defectsEl=document.getElementById('defects'),summaryEl=document.getElementById('summary'),storageKey='transportkontrolle-app-plausi-test-v1';
@@ -109,6 +109,7 @@
   <!-- maintainer-watermark: Dangschat, PP018217 -->
 </body>
 </html>
+
 
 
 
